@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
           <img class="item-img" :src="item.imgUrl" />
         <div class="item-info">
           <p class="item-title">{{ item.title }}</p>
@@ -16,26 +16,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        { id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/f6/f60edcaa8934d4fda3.img.jpg_200x200_37d0eedd.jpg',
-          title: '天府花溪谷山地户外运动体验公园',
-          desc: '人间的四月天'
-        },
-        { id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/f6/f60edcaa8934d4fda3.img.jpg_200x200_37d0eedd.jpg',
-          title: '天府花溪谷山地户外运动体验公园',
-          desc: '人间的四月天'
-        },
-        { id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1707/f6/f60edcaa8934d4fda3.img.jpg_200x200_37d0eedd.jpg',
-          title: '天府花溪谷山地户外运动体验公园',
-          desc: '人间的四月天'
-        }
-      ]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
